@@ -1,6 +1,6 @@
 <h1>Signal Event</h1>
 
-<a href="Signal.lua">Signal.lua</a> is a lightweight Lua implementation of the signal/slot (event) pattern, inspired by the Roblox Studio BindableEvent. This library allows you to create custom signals, connect your own functions to them and fire events with arguments. Features include: 
+<a href="signal.lua">Signal.lua</a> is a lightweight Lua implementation of the signal/slot (event) pattern, inspired by the Roblox Studio BindableEvent. This library allows you to create custom signals, connect your own functions to them and fire events with arguments. Features include: 
 <li style="list-style:none">
 <ul><code>Await</code> Connects a listener to the signal. The listener will be called every time the signal is fired. Returns a connection object that can be disconnected.</ul>
 <ul><code>Once</code> Connects a listener to the signal, but gets disconnected after the signal has been fired.</ul>
