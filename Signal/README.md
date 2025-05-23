@@ -8,7 +8,8 @@
 <ul><code>Destroy</code> Cleans up the signal by disconnecting all listeners and making the signal unusable.</ul>
 </li>
 
-### Code exmaple:
+## Code exmaple:
+### <code>Await</code>
 <h4>
 
 ```lua
