@@ -1,6 +1,6 @@
 # ClassManager
 
-`ClassManager.lua` is a lightweight Lua OOP (Object-Oriented Programming) system for creating classes, supporting inheritance, constructors, and instance methods. Inspired by familiar OOP patterns, it allows you to define base classes, inherit from them, and manage instances easily.
+<code><a href="ClassManager.lua">ClassManager.lua</a></code> is a lightweight Lua OOP (Object-Oriented Programming) system for creating classes, supporting inheritance, constructors, and instance methods. Inspired by familiar OOP patterns, it allows you to define base classes, inherit from them, and manage instances easily.
 
 ## Features
 - Simple class definition syntax
