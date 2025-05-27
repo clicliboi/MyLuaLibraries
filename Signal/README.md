@@ -20,7 +20,8 @@ local Signal = require("Signal.lua")
 local newSignal = Signal.new()
 
 -- Create a listener
-local connection = newSignal:Await(function(msg)
+local connection;
+connection = newSignal:Await(function(msg)
     print(msg)
     connection:Disconnect()
 end)
