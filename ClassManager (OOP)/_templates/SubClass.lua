@@ -1,5 +1,5 @@
 return {
-    inherit = require "_templates.BaseClass",
+    inherit = require "MODULE_PATH",
 
     __init__ = function(self, ...)
         self:base("__init__", ...)
