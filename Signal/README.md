@@ -14,7 +14,7 @@
 
 ```lua
 -- Requiring the 'Signal.lua' library
-local Signal = require("Signal.lua")
+local Signal = require("Signal")
 
 -- Creating a new 'Signal' instance
 local newSignal = Signal.new()
