@@ -14,39 +14,46 @@
 
 ### Defining a Base Class
 ```lua
--- BaseClass.lua
-return {
+-- Module 'BaseClass.lua'
+local BaseClass = {
     __init__ = function(self, msg)
         self.msg = msg
     end,
-    PrintOut = function(self)
-        print(self.msg)
-    end,
 }
+
+return BaseClass
 ```
 
 ### Defining a Subclass
 ```lua
--- SubClass.lua
-local BaseClass = require("_templates.BaseClass")
-return {
-    inherit = BaseClass,
+-- Module 'SubClass.lua'
+local SubClass = {
+    inherit = require "_templates.BaseClass",
     __init__ = function(self, msg)
         self:base("__init__", msg)
     end,
+
+    PrintOut = function(self)
+        print(self.msg)
+    end,
+
     ChangeMessage = function(self, newMsg)
         self.msg = newMsg
     end,
 }
+
+return SubClass
 ```
 
 ### Registering and Using a Class
 ```lua
+-- Requiring 'ClassManager.lua'
 local ClassManager = require("ClassManager")
-local SubClass = require("_templates.SubClass")
 
-ClassManager:SetClass(SubClass)
+-- Creating a new class
+local SubClass = ClassManager:SetClass("SubClass")
 
+-- Creating a new instance of 'BaseClass'
 local instance = SubClass.new("Hello World!")
 instance:PrintOut() -- prints: Hello World!
 instance:ChangeMessage("Hello Lua!")
