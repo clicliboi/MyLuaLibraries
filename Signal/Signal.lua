@@ -3,7 +3,7 @@ local unpack = unpack or table.unpack
 local function _await(self, arg1, arg2)
     local _upper = self
     local _function = arg2 or arg1
-    assert(type(_function) == "function", "First Argument has to be a function")
+    assert(type(_function) == "function", "First argument requires a callback")
 
     --- @class connection
     local connection = setmetatable({
@@ -26,7 +26,7 @@ local function _await(self, arg1, arg2)
         end,
     }, {
         __newindex = function()
-            error("Cannot add items into an await connection directly")
+            error("Cannot add items into an already existing connection")
         end,
     })
 
@@ -43,7 +43,7 @@ local signal = {
     Await = setmetatable({},
     {
         __newindex = function()
-            error("Cannot add items into 'Await' directly")
+            error("Await function does not accept direct item additions")
         end,
 
         __call = _await,
